@@ -7,11 +7,11 @@ const db = require("./db/connection");
 const app = express();
 mongoose = require("mongoose");
 const bodyParser = require('body-parser');
-app.use(express.json());
+app.use(express.json({limit: '500mb'}));
 app.use('/uploads', express.static('uploads'));
-app.use(bodyParser.urlencoded({extended:false}));
-app.use(express.json());
-
+app.use(bodyParser.urlencoded({limit: '500mb',extended:false}));
+//app.use(express.json());
+const fs = require('fs-extra')
 //routes
 userRoutes(app);
 

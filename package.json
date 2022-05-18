@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "express": "^4.17.3",
+    "fs-extra": "^10.1.0",
     "mongoose": "^6.3.1",
     "multer": "^1.4.4",
     "nodemon": "^2.0.15"
